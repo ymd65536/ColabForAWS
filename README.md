@@ -18,27 +18,27 @@
 
 ```bash
 # 1. インストーラーをダウンロード
-curl "https://awscli.amazonaws.com/awscli-exe-linux-$(uname -m).zip" -o "awscliv2.zip"
+! curl "https://awscli.amazonaws.com/awscli-exe-linux-$(uname -m).zip" -o "awscliv2.zip"
 
 # 2. unzipがインストールされていない場合はインストール
-sudo apt update && sudo apt install unzip -y  # Ubuntu/Debian系
+! sudo apt update && sudo apt install unzip -y  # Ubuntu/Debian系
 # または
-sudo yum install unzip -y                     # CentOS/RHEL系
+! sudo yum install unzip -y                     # CentOS/RHEL系
 
 # 3. ダウンロードしたファイルを展開
-unzip awscliv2.zip
+! unzip awscliv2.zip
 
 # 4. インストール実行
-sudo ./aws/install
+! sudo ./aws/install
 
 # 5. インストール確認
-aws --version
+! aws --version
 
 # ダウンロードしたzipファイルと展開したディレクトリを削除してクリーンアップします。
-rm  "awscliv2.zip"
+! rm  "awscliv2.zip"
 
 # 解凍したディレクトリを削除
-rm -rf aws
+! rm -rf aws
 ```
 
 ## AWS SSO の設定とログイン
